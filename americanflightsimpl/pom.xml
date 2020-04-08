@@ -44,11 +44,13 @@
                 </executions>
                 <configuration>
                     <coverage>
-                        <runCoverage>true</runCoverage>
-                        <formats>
-                            <format>html</format>
-                        </formats>
-                    </coverage>
+    <runCoverage>true</runCoverage>
+    <failBuild>true</failBuild>
+
+    <requiredApplicationCoverage>10</requiredApplicationCoverage> 
+    <requiredResourceCoverage>10</requiredResourceCoverage>
+    <requiredFlowCoverage>10</requiredFlowCoverage>
+</coverage>
                 </configuration>
             </plugin>
         </plugins>
