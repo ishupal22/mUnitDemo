@@ -47,9 +47,9 @@
     <runCoverage>true</runCoverage>
     <failBuild>true</failBuild>
 
-    <requiredApplicationCoverage>10</requiredApplicationCoverage> 
-    <requiredResourceCoverage>10</requiredResourceCoverage>
-    <requiredFlowCoverage>10</requiredFlowCoverage>
+    <requiredApplicationCoverage>0</requiredApplicationCoverage> 
+    <requiredResourceCoverage>0</requiredResourceCoverage>
+    <requiredFlowCoverage>0</requiredFlowCoverage>
 </coverage>
                 </configuration>
             </plugin>
