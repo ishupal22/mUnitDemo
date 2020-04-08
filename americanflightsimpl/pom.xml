@@ -16,6 +16,8 @@
 		<app.runtime>4.2.2</app.runtime>
 		<mule.maven.plugin.version>3.3.5</mule.maven.plugin.version>
 	<munit.version>2.2.4</munit.version>
+			<uid>Training-1</uid>
+<pwd></pwd>
     </properties>
 
 	<build>
@@ -26,7 +28,26 @@
 				<version>${mule.maven.plugin.version}</version>
 				<extensions>true</extensions>
 				<configuration>
+					<cloudHubDeployment>
+						<uri>https://www.anypoint.mulesoft.com</uri>
+						<muleVersion>${app.runtime}</muleVersion>
+						<muleVersion>${mule.version}</muleVersion>
+						<username>${uid}</username>
+						<password>${pwd}</password>
+						<applicationName>${application.name}</applicationName>
+						<workerType>Micro</workerType>
+						<environment>Sandbox</environment>
+						</cloudHubDeployment>
 				</configuration>
+				<executions>
+					<execution>
+						<id>deploy</id>
+						<phase>deploy</phase>
+						<goals>
+							<goal>deploy</goal>
+						</goals>
+					</execution>
+				</executions>
 			</plugin>
 		<plugin>
                 <groupId>com.mulesoft.munit.tools</groupId>
